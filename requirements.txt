@@ -1,0 +1,13 @@
+# Minimal dependencies to support:
+#   from transformers import pipeline
+# Works on CPU-only Windows setups; PyTorch will install the CPU wheel by default.
+
+transformers>=4.44.0,<5.0.0
+# PyTorch backend used by transformers pipelines by default
+torch>=2.2.0,<3.0.0
+# Safe and faster model weight format for many HF models
+safetensors>=0.4.3
+# Parameter-Efficient Fine-Tuning (LoRA, adapters)
+peft>=0.11.0,<0.15
+# Lightweight training utilities (device placement, CPU/GPU orchestration)
+accelerate>=0.30.0,<1.0.0

@@ -1,0 +1,22 @@
+[
+  {"question":"What is a large language model (LLM)?","answer":"A language model with a large number of parameters (generally more than a billion) that is trained on large amounts of text via self-supervised learning."},
+  {"question":"Around when did LLMs appear?","answer":"They appeared around 2017."},
+  {"question":"What kind of tasks can LLMs accomplish?","answer":"A wide range of tasks (not just sentiment analysis or named-entity recognition) including conversation, summarisation, question-answering, etc."},
+  {"question":"How are LLMs pre-trained?","answer":"They are pretrained to predict a likely continuation for a given input."},
+  {"question":"What factors improve the quality of generated content by LLMs?","answer":"Larger number of parameters, bigger and higher-quality training data, and more compute used during training."},
+  {"question":"What happens after pre-training in many LLM workflows?","answer":"They are often fine-tuned to adopt the role of a conversational assistant and to be “helpful, honest, and harmless.”"},
+  {"question":"What capabilities do language models with many parameters capture?","answer":"They capture much of the syntax and semantics of human language and reproduce general world knowledge."},
+  {"question":"What type of learning is used to train LLMs on large amounts of unlabeled text?","answer":"Self-supervised learning."},
+  {"question":"Before the success of LLMs, what did NLP research mainly focus on?","answer":"Supervised learning of specialised models for specific tasks."},
+  {"question":"How does a large language model learn world knowledge?","answer":"Through memorisation of many facts during pre-training on large text corpora."},
+  {"question":"Why are LLMs considered “general-purpose” rather than task-specific?","answer":"Because they are not trained only for one task (e.g., sentiment analysis) but can handle many different tasks."},
+  {"question":"What is the significance of “parameters” in an LLM?","answer":"Parameters are the learned weights in the model; more parameters generally allow more capacity to learn language patterns and knowledge."},
+  {"question":"How do LLMs differ from earlier specialised NLP models?","answer":"Earlier models were trained for one specific task, whereas LLMs are pretrained on broad text and then adapted to many tasks."},
+  {"question":"What is meant by “self-supervised learning” in the context of LLMs?","answer":"It is a technique where the model learns from large amounts of unlabeled text by predicting parts of the text itself (e.g., next-token prediction)."},
+  {"question":"What role does training compute play in LLM performance?","answer":"Higher compute allows training on larger models and more data, which improves the model’s capabilities."},
+  {"question":"Why might fine-tuning be necessary after pre-training?","answer":"Because the pretrained model may not behave as a helpful conversational assistant out of the box — fine-tuning aligns it to that role."},
+  {"question":"How do LLMs enable conversational agents?","answer":"By being fine-tuned for conversation roles and generating coherent, contextually relevant text continuations."},
+  {"question":"What general world knowledge capability do LLMs have?","answer":"They can reproduce many facts and knowledge about the world that they were exposed to during training."},
+  {"question":"What architecture is typically used for modern LLMs?","answer":"Deep neural networks (often transformer‐based) with many parameters."},
+  {"question":"What downstream roles are LLMs often adapted to after pre-training?","answer":"Roles such as conversational assistants, being “helpful, honest, and harmless.”"}
+]
