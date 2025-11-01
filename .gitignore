@@ -1,4 +1,4 @@
-./testing/
+testing/
 
 # Ignore VSCode notebook checkpoints
 .vscode-notebook-cell-tests/
