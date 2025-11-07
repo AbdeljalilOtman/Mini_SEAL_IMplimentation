@@ -83,19 +83,6 @@ Here’s the simplified version of what you’ll code and run (we’ll translate
    * Reflect on which types of edits worked better (e.g., simpler statements vs QA pairs, more epochs vs fewer epochs).
    * Note limitations (hardware, number of rounds, forgetting risk).
 
----
-
-## Why this simplified version is still *valid* for your resume
-
-* You’ll **demonstrate understanding** of the core SEAL ideas: self‐edit generation, model fine‐tuning, evaluation, feedback loop.
-* You’ll show you can **execute** a mini version of the loop with your hardware.
-* You’ll capture a workflow: generate data → fine‐tune → evaluate → improve. This is exactly what ML/AI internships appreciate.
-* You’ll have results you can discuss (e.g., “my accuracy improved from X to Y after my self-edit phase”), which is concrete and impressive for a student.
-* You don’t need to claim you matched SOTA or did large‐scale RL; rather you show you *implemented the concept* and learnt from it.
-
----
-
-If you like, I can **create a toy “diagram” or pseudo‐code** of this simplified workflow (so you can show it in your GitHub README) and **map out folder structure + code modules** you’ll write. Would that be helpful?
 
 [1]: https://arxiv.org/html/2506.10943v1?utm_source=chatgpt.com "Self-Adapting Language Models - arXiv"
 [2]: https://jyopari.github.io/posts/seal?utm_source=chatgpt.com "Self-Adapting Language Models - Jyothish Pari"
