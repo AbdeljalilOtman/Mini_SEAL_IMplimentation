@@ -1,0 +1,82 @@
+[
+  {
+    "synthetic_example": "Question: What training method do LLMs use? Answer: LLMs are trained using self-supervised learning on large amounts of unlabeled text.",
+    "directive": {
+      "epochs": 2,
+      "learning_rate": 2e-05,
+      "batch_size": 4
+    }
+  },
+  {
+    "synthetic_example": "Question: When did LLMs first appear? Answer: Large language models appeared around 2017.",
+    "directive": {
+      "epochs": 3,
+      "learning_rate": 1e-05,
+      "batch_size": 2
+    }
+  },
+  {
+    "synthetic_example": "Question: What is the typical parameter count for an LLM? Answer: LLMs generally have more than a billion parameters.",
+    "directive": {
+      "epochs": 2,
+      "learning_rate": 2e-05,
+      "batch_size": 4
+    }
+  },
+  {
+    "synthetic_example": "Question: How are LLMs typically fine-tuned after pre-training? Answer: LLMs are fine-tuned to be helpful, honest, and harmless conversational assistants.",
+    "directive": {
+      "epochs": 3,
+      "learning_rate": 2e-05,
+      "batch_size": 2
+    }
+  },
+  {
+    "synthetic_example": "Question: What enables LLMs to reproduce world knowledge? Answer: Language models with many parameters can capture syntax and semantics, enabling memorization of facts during training.",
+    "directive": {
+      "epochs": 2,
+      "learning_rate": 3e-05,
+      "batch_size": 4
+    }
+  },
+  {
+    "synthetic_example": "Question: What did NLP research focus on before LLMs? Answer: Before LLMs, NLP research focused on supervised learning of specialized models for specific tasks.",
+    "directive": {
+      "epochs": 2,
+      "learning_rate": 2e-05,
+      "batch_size": 4
+    }
+  },
+  {
+    "synthetic_example": "Question: What factors affect LLM quality? Answer: Quality increases with more parameters, better training data quality and size, and more compute.",
+    "directive": {
+      "epochs": 3,
+      "learning_rate": 1e-05,
+      "batch_size": 2
+    }
+  },
+  {
+    "synthetic_example": "A large language model has billions of parameters and learns from unlabeled text through self-supervised learning.",
+    "directive": {
+      "epochs": 2,
+      "learning_rate": 2e-05,
+      "batch_size": 4
+    }
+  },
+  {
+    "synthetic_example": "LLMs predict text continuations and can perform many tasks without task-specific training.",
+    "directive": {
+      "epochs": 2,
+      "learning_rate": 2e-05,
+      "batch_size": 4
+    }
+  },
+  {
+    "synthetic_example": "Deep neural networks trained on massive text datasets emerged around 2017 as conversational agents.",
+    "directive": {
+      "epochs": 3,
+      "learning_rate": 2e-05,
+      "batch_size": 2
+    }
+  }
+]

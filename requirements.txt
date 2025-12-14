@@ -10,4 +10,4 @@ safetensors>=0.4.3
 # Parameter-Efficient Fine-Tuning (LoRA, adapters)
 peft>=0.11.0,<0.15
 # Lightweight training utilities (device placement, CPU/GPU orchestration)
-accelerate>=0.30.0,<1.0.0
+accelerate>=0.34.0,<1.0.0
