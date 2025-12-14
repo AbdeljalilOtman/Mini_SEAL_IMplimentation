@@ -1,0 +1,142 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{geometry}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{tcolorbox}
+
+\geometry{margin=1in}
+\hypersetup{colorlinks=true, linkcolor=blue, urlcolor=blue}
+
+\title{\textbf{My Understanding of VC-Dimension}\\[0.5em]\large As a Computer Science Student}
+\author{Student Notes}
+\date{\today}
+
+\newtheorem{definition}{Definition}
+\newtheorem{example}{Example}
+
+\begin{document}
+
+\maketitle
+
+\section{What is VC-Dimension?}
+
+From what I understand, \textbf{VC-dimension} (Vapnik-Chervonenkis dimension) is a way to measure how ``powerful'' or ``complex'' a hypothesis set is. It tells us the \textbf{largest number of points that can be perfectly classified in all possible ways} by our hypothesis set.
+
+\section{The Key Concept: Shattering}
+
+\begin{definition}[Shattering]
+A hypothesis set $\mathcal{H}$ \textbf{shatters} a set of $m$ points if it can realize ALL $2^m$ possible labelings of those points.
+\end{definition}
+
+For example, with 3 points, there are $2^3 = 8$ possible ways to label them ($+/-$ combinations). If $\mathcal{H}$ can achieve all 8 labelings, then $\mathcal{H}$ shatters those 3 points.
+
+\begin{tcolorbox}[colback=blue!5!white,colframe=blue!75!black,title=VC-Dimension Definition]
+\[
+\text{VCdim}(\mathcal{H}) = \max\{m : \Pi_{\mathcal{H}}(m) = 2^m\}
+\]
+\textbf{The size of the largest set that can be shattered}
+\end{tcolorbox}
+
+\section{Simple Examples I Understood}
+
+\begin{example}[Intervals on the Real Line]
+\textbf{VCdim = 2}
+\begin{itemize}
+    \item Can shatter 2 points: all 4 labelings $(+,+), (-,-), (+,-), (-,+)$ are possible
+    \item Cannot shatter 3 points: the labeling $(+, -, +)$ is impossible with a single interval!
+\end{itemize}
+\end{example}
+
+\begin{example}[Hyperplanes in $\mathbb{R}^2$]
+\textbf{VCdim = 3}
+\begin{itemize}
+    \item Can shatter 3 non-collinear points
+    \item Cannot shatter 4 points (some diagonal labelings are impossible)
+\end{itemize}
+\end{example}
+
+\begin{example}[Axis-Aligned Rectangles]
+\textbf{VCdim = 4}
+\begin{itemize}
+    \item 4 points in a diamond pattern can be shattered
+    \item 5 points fail because an interior point can't be labeled opposite to the boundary points
+\end{itemize}
+\end{example}
+
+\section{Why VC-Dimension Matters}
+
+The generalization bound from the chapter shows:
+
+\begin{tcolorbox}[colback=green!5!white,colframe=green!75!black,title=Generalization Bound]
+\[
+R(h) \leq \hat{R}(h) + O\left(\sqrt{\frac{d \cdot \log(m/d)}{m}}\right)
+\]
+\end{tcolorbox}
+
+Where:
+\begin{itemize}
+    \item $R(h)$ = true error (generalization error)
+    \item $\hat{R}(h)$ = training error (empirical error)
+    \item $d$ = VC-dimension
+    \item $m$ = sample size
+\end{itemize}
+
+\textbf{Key insight}: The ratio $\frac{m}{d}$ determines how well we generalize!
+
+\begin{itemize}
+    \item \textbf{High VC-dimension} $\Rightarrow$ Need more samples to generalize
+    \item \textbf{Low VC-dimension} $\Rightarrow$ Can learn from fewer samples
+\end{itemize}
+
+\section{Connection to Occam's Razor}
+
+This is basically a mathematical version of ``prefer simpler hypotheses''! A smaller VC-dimension means a simpler hypothesis class, which needs less data to learn well.
+
+\section{What Surprised Me}
+
+\begin{enumerate}
+    \item \textbf{VC-dimension $\neq$ number of parameters}: The sine function example shows that even 1 parameter can give infinite VC-dimension!
+    
+    \item \textbf{Sauer's Lemma}: If $\text{VCdim}(\mathcal{H}) = d$, then the growth function is at most $O(m^d)$, not $2^m$. This is why finite VC-dimension enables learning!
+    
+    \begin{tcolorbox}[colback=yellow!5!white,colframe=yellow!75!black,title=Sauer's Lemma]
+    \[
+    \Pi_{\mathcal{H}}(m) \leq \sum_{i=0}^{d} \binom{m}{i} \leq \left(\frac{em}{d}\right)^d = O(m^d)
+    \]
+    \end{tcolorbox}
+    
+    \item \textbf{Lower bounds exist}: The chapter proves that you NEED $\Omega\left(\frac{d}{\varepsilon^2}\right)$ samples --- you can't do better than this for any algorithm.
+\end{enumerate}
+
+\section{My Takeaway}
+
+VC-dimension answers the fundamental question: \textbf{``Can we learn from finite data?''}
+
+\begin{tcolorbox}[colback=red!5!white,colframe=red!75!black,title=Key Result]
+\begin{itemize}
+    \item If $\text{VCdim}(\mathcal{H}) = \infty$ $\Rightarrow$ Learning is impossible (not PAC-learnable)
+    \item If $\text{VCdim}(\mathcal{H}) = d < \infty$ $\Rightarrow$ We need roughly $O\left(\frac{d}{\varepsilon^2}\right)$ samples to learn
+\end{itemize}
+\end{tcolorbox}
+
+\section{Connection to My SEAL Implementation}
+
+This connects directly to my SEAL implementation --- when fine-tuning GPT-2, the \textbf{LoRA adapter} effectively reduces the ``complexity'' of what we're learning, similar to controlling the VC-dimension!
+
+\begin{itemize}
+    \item LoRA only updates $\sim 0.3\%$ of parameters
+    \item This is like restricting to a hypothesis class with lower VC-dimension
+    \item Result: We can learn from fewer examples (our small self-edit dataset)
+\end{itemize}
+
+\vspace{1em}
+\hrule
+\vspace{0.5em}
+\textit{Notes compiled while studying ``Foundations of Machine Learning'' - Chapter 3: Rademacher Complexity and VC-Dimension}
+
+\end{document}
