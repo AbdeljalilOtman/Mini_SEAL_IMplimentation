@@ -59,4 +59,12 @@ desktop.ini
 
 
 lora_finetuned_gpt2_round2/
+lora_finetuned_gpt2_round3/
 lora_adapter_round2/
+lora_finetuned_gpt2_round4/
+
+lora_optionA_mstep/
+
+lora_adapter_round3/
+lora_adapter_round4/
+lora_adapter_optionA/

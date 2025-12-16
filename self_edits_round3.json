@@ -1,0 +1,142 @@
+[
+  {
+    "synthetic_example": "Question: What defines a large language model? Answer: A neural network with over a billion parameters, trained on massive text datasets using self-supervised methods.",
+    "directive": {
+      "epochs": 3,
+      "learning_rate": 2e-05
+    }
+  },
+  {
+    "synthetic_example": "Question: How would you describe an LLM? Answer: It is a deep neural network language model containing billions of parameters, pre-trained on unlabeled text.",
+    "directive": {
+      "epochs": 3,
+      "learning_rate": 2e-05
+    }
+  },
+  {
+    "synthetic_example": "Question: What makes a language model 'large'? Answer: Having more than a billion parameters and being trained on large amounts of text data.",
+    "directive": {
+      "epochs": 3,
+      "learning_rate": 2e-05
+    }
+  },
+  {
+    "synthetic_example": "Question: Define LLM in simple terms. Answer: A very large neural network that learns language patterns from huge amounts of text.",
+    "directive": {
+      "epochs": 3,
+      "learning_rate": 2e-05
+    }
+  },
+  {
+    "synthetic_example": "Question: When did large language models emerge? Answer: Around 2017.",
+    "directive": {
+      "epochs": 3,
+      "learning_rate": 2e-05
+    }
+  },
+  {
+    "synthetic_example": "Question: What year marks the beginning of the LLM era? Answer: 2017 is when LLMs first appeared.",
+    "directive": {
+      "epochs": 3,
+      "learning_rate": 2e-05
+    }
+  },
+  {
+    "synthetic_example": "Question: How long have LLMs existed? Answer: Since approximately 2017, so about 8 years.",
+    "directive": {
+      "epochs": 3,
+      "learning_rate": 2e-05
+    }
+  },
+  {
+    "synthetic_example": "Question: What learning approach do LLMs use during pre-training? Answer: Self-supervised learning on unlabeled text data.",
+    "directive": {
+      "epochs": 3,
+      "learning_rate": 2e-05
+    }
+  },
+  {
+    "synthetic_example": "Question: How are large language models trained initially? Answer: Through self-supervised learning, predicting text continuations without labeled data.",
+    "directive": {
+      "epochs": 3,
+      "learning_rate": 2e-05
+    }
+  },
+  {
+    "synthetic_example": "Question: What type of supervision is used for LLM pre-training? Answer: Self-supervision - the model learns from the text itself without human labels.",
+    "directive": {
+      "epochs": 3,
+      "learning_rate": 2e-05
+    }
+  },
+  {
+    "synthetic_example": "Question: What range of tasks can LLMs perform? Answer: A wide variety including question-answering, summarization, translation, and conversation.",
+    "directive": {
+      "epochs": 3,
+      "learning_rate": 2e-05
+    }
+  },
+  {
+    "synthetic_example": "Question: Are LLMs limited to specific tasks? Answer: No, they are general-purpose and can accomplish many different tasks without task-specific training.",
+    "directive": {
+      "epochs": 3,
+      "learning_rate": 2e-05
+    }
+  },
+  {
+    "synthetic_example": "Question: Why are LLMs considered versatile? Answer: Because they can handle diverse tasks like writing, coding, analysis, and dialogue without retraining.",
+    "directive": {
+      "epochs": 3,
+      "learning_rate": 2e-05
+    }
+  },
+  {
+    "synthetic_example": "Question: Why are LLMs fine-tuned after pre-training? Answer: To make them helpful, honest, and harmless as conversational assistants.",
+    "directive": {
+      "epochs": 3,
+      "learning_rate": 2e-05
+    }
+  },
+  {
+    "synthetic_example": "Question: What is the goal of post-training alignment? Answer: To ensure the model behaves as a safe, helpful, and truthful assistant.",
+    "directive": {
+      "epochs": 3,
+      "learning_rate": 2e-05
+    }
+  },
+  {
+    "synthetic_example": "Question: What properties should a fine-tuned LLM have? Answer: It should be helpful, honest, and harmless (the 3 H's).",
+    "directive": {
+      "epochs": 3,
+      "learning_rate": 2e-05
+    }
+  },
+  {
+    "synthetic_example": "Question: What improves LLM output quality? Answer: More parameters, better training data, and increased compute resources.",
+    "directive": {
+      "epochs": 3,
+      "learning_rate": 2e-05
+    }
+  },
+  {
+    "synthetic_example": "Question: Name three factors that enhance LLM performance. Answer: Parameter count, training data quality and size, and computational power used in training.",
+    "directive": {
+      "epochs": 3,
+      "learning_rate": 2e-05
+    }
+  },
+  {
+    "synthetic_example": "Question: How do LLMs acquire world knowledge? Answer: By memorizing facts from the large text corpora during pre-training.",
+    "directive": {
+      "epochs": 3,
+      "learning_rate": 2e-05
+    }
+  },
+  {
+    "synthetic_example": "Question: Where does an LLM's factual knowledge come from? Answer: From memorization of information present in training data.",
+    "directive": {
+      "epochs": 3,
+      "learning_rate": 2e-05
+    }
+  }
+]
